@@ -36,21 +36,21 @@ const HomeServices = () => {
     }
 
     return (
-        <div className='w-full m-auto  mt-10 px-6 py-4'>
-            <div className='w-full md:w-[55%] m-auto'>
-                <h1 className='text-5xl font-bold mt-3 text-center'  data-aos="fade-down"><span className='text-[#0F00AA]'>Services </span> We Offer</h1>
-                <p className='text-center mt-6 text-[19px]'>TOJO GLOBAL offers crypto solutions, targeted marketing, impactful design, custom development, and professional video editing to elevate your brand.</p>
+        <div className='w-full m-auto mt-4 md:mt-10 md:px-6 px-2 py-4'>
+            <div className=' md:w-[55%] w-[90%] m-auto'>
+                <h1 className='md:text-5xl text-4xl font-bold mt-3 text-center'  data-aos="fade-down"><span className='text-[#0F00AA]'>Services </span> We Offer</h1>
+                <p className=' mt-6  md:text-[19px] text-center'>TOJO GLOBAL offers crypto solutions, targeted marketing, impactful design, custom development, and professional video editing to elevate your brand.</p>
             </div>
 
-            <div className='w-full mt-4 flex flex-col md:flex-row'>
-                <div className='w-full md:w-[50%]'  data-aos="flip-left">
-                    <ul className='flex flex-col gap-4 px-16 ml-30'>
+            <div className='w-full mt-4 flex flex-col md:flex-row items-center justify-center'>
+                <div className=' md:w-[50%] w-[330px] m-auto mt-4'  data-aos="flip-left">
+                    <ul className='flex flex-col gap-4  md:px-16 md:ml-30'>
                         {
                             services.map((service, index) => (
                                 <li
                                     key={index}
                                     onClick={() => handleSelectSerivce(service)}
-                                    className={`cursor-pointer mx-auto md:mx-0 text-center w-[70%] hover:bg-gradient-to-r from-[#06004C] to-[#0F00A8] hover:text-white py-2 text-2xl rounded-full font-semibold border-2 border-gray-200  ${selectedService.title === service.title ? 'bg-gradient-to-r from-[#06004C] to-[#0F00A8] text-white' : 'bg-white text-black transition-all duration-200'}`}
+                                    className={`cursor-pointer mx-auto md:mx-0 text-center w-full md:w-[70%] hover:bg-gradient-to-r from-[#06004C] to-[#0F00A8] hover:text-white py-2 md:text-2xl text-xl rounded-full font-semibold border-2 border-gray-200  ${selectedService.title === service.title ? 'bg-gradient-to-r from-[#06004C] to-[#0F00A8] text-white' : 'bg-white text-black transition-all duration-200'}`}
                                 >
                                     {service.title}
                                 </li>
@@ -60,11 +60,11 @@ const HomeServices = () => {
 
                     </ul>
                 </div>
-                <div className='w-full md:w-[50%] mt-4'  data-aos="flip-right">
+                <div className='w-[350px] md:w-[50%]  mt-8 px-2'  data-aos="flip-right">
                     <img src='https://codesthinker.com/home/servicesImage.png' alt='' />
                     {
                         selectedService &&
-                        <div className='flex flex-wrap gap-7 mt-7 mr-10'>
+                        <div className='flex flex-col md:flex-row md:flex-wrap gap-7 p-2 items-center mt-7 md:mr-10'>
                             {
                                 selectedService.tags.map((tag, index) => (
                                     <p className='text-[17px] font-semibold'>{tag}</p>

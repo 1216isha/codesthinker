@@ -10,21 +10,23 @@ import Team from './pages/Team';
 import Contact from './pages/Contact';
 import ServicesDetail from './components/services/ServicesDetail';
 import LoginForm from './components/common/LoginForm';
-import CreateAccount from './components/common/CreateAccount';
+import CreateAccount from './components/common/SignUp';
 import ForgotPasswordPage from './components/common/ForgotPasswordPage';
 import Whatsapp from './components/common/Whatsapp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import ScrollToTop from './components/common/ScrollToTop';
 
 const MainFunction = () => {
   return (
     <>
       <Whatsapp />
       <Navbar />
+      <ScrollToTop />
       <Outlet />
       <Footer />
-    
+
     </>
   )
 }
@@ -40,21 +42,23 @@ const router = createBrowserRouter([
       { path: "/team", element: <Team /> },
       { path: "/contact", element: <Contact /> },
       { path: "/services-detail/:id", element: <ServicesDetail /> },
-      { path: "/login", element: <LoginForm /> },
-      { path: "/signup", element: <CreateAccount /> },
-      { path: "/forgot-password", element: <ForgotPasswordPage /> },
+
 
     ]
-  }
+  },
+  
+  { path: "/login", element: <LoginForm /> },
+  { path: "/signup", element: <CreateAccount /> },
+  { path: "/forgot-password", element: <ForgotPasswordPage /> },
 ])
 
 function App() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: false,
-        });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <RouterProvider router={router} />
   )

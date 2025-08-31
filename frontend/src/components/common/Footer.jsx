@@ -9,15 +9,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 
-
-
-
 const Footer = () => {
     return (
         <div className='px-14 bg-[#0A043C]  text-white'>
-            <div className='w-full flex flex-col md:flex-row justify-between mx-auto py-10 font-sans '>
+            <div className='w-full flex flex-col md:flex-row justify-between md:gap-0 gap-6 mx-auto py-10 font-sans '>
 
-                <div className='w-full md:w-[20%] ml-10'>
+                <div className='w-full md:w-[30%] md:ml-10'>
                     <img src={companylogo} alt='companylogo' className='w-36 ' />
                     <p className='mt-5'>We offer a range of cutting-edge web development and software solutions tailored to meet client needs. Our experienced team delivers collaboratively and efficiently.</p>
                     <div className='flex gap-5 mt-5'>
@@ -29,7 +26,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className='flex flex-col w-full md:w-[20%] mt-[10px]'>
+                <div className='flex flex-col w-full md:w-[25%] md:px-12 text-justify mt-[10px]'>
                     <h3 className='text-xl font-bold hover:underline'>Services</h3>
                     <div className='mt-[15px] '>
                         <Link to="" >Business Intelligence</Link><br />
@@ -40,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col w-full md:w-[20%] mt-[10px]'>
+                <div className='flex flex-col w-full md:w-[25%] mt-[10px]'>
                     <h3 className='text-xl font-bold hover:underline'>Company</h3>
                     <div className='mt-[15px] '>
                         <Link to="" >About Us</Link><br />
@@ -51,7 +48,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='w-full md:w-[20%] mt-[10px]'>
+                <div className='w-full md:w-[25%] mt-[10px]'>
                     <h3 className='text-xl font-bold hover:underline'>Contact Info</h3>
 
                     <div className=''>
@@ -78,13 +75,13 @@ const Footer = () => {
                 </div>
 
             </div>
-            <div className='w-full md:max-w-[300px] ms-auto mt-3'>
-                <input type="text" name="" id="" placeholder='Your Mail' className='bg-white text-gray-500 py-1 px-3 w-[70%] rounded-l-md focus:not-[]: h-full outline-none border-none' />
-                <button className='btn bg-[#0A2E7E] text-white text-center h-full py-1 px-2 w-[30%] rounded-r-md'>Submit</button>
+            <div className='w-full md:max-w-[400px] ms-auto mt-3'>
+                <input type="text" name="" id="" placeholder='Your Mail' className='bg-white text-gray-500 md:py-2 py-1 px-3 w-[70%] rounded-l-md focus:not-[]: h-[42px] outline-none border-none' />
+                <button className='btn bg-[#0F00AA] hover:bg-[#3105aa] text-white text-center h-[43px] py-1 md:py-2 px-2 w-[30%] rounded-r-md'>Submit</button>
             </div>
             <br />
             <div className='flex flex-col text-center text-[10px] pb-10' >
-                <hr className='w-[90%] ml-[40px]  text-gray-500' />
+                <hr className='w-[90%] md:ml-[40px]  text-gray-500' />
                 <p className='mt-6  text-gray-300'>© 2024-All Rights Reserved-Code's Thinker</p>
             </div>
         </div>

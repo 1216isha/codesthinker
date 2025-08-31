@@ -1,32 +1,23 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ForgotPasswordPage = () => {
-  const [otp,setOtp] = useState('');
+  const [otp, setOtp] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
-
-  // const handleChange = (e) => {
-  //   setData({
-  //     ...data,
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("OTP: ", otp);
-    navigate("/")
-
+    navigate("/");
     setMessage("OTP has been sent to your email.");
   };
 
   return (
-    <div className="w-full pb-10 pt-30 flex justify-center items-center m-auto bg-[#F3F4F6]">
+    <div className="w-full min-h-screen flex justify-center items-center bg-[#F3F4F6] px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-[450px] h-auto bg-white rounded-lg py-6 px-6 shadow-lg"
+        className="w-full max-w-md bg-white rounded-lg py-6 px-6 shadow-lg"
         noValidate
       >
         <h2 className="text-2xl font-bold text-center mb-6">Forgot Password</h2>
@@ -39,8 +30,8 @@ const ForgotPasswordPage = () => {
           type="number"
           name="otp"
           value={otp}
-          onChange={(e)=>setOtp(e.target.value)}
-          className="w-full py-2 px-2 border-2 border-[#BEDBFF] rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#2B7FFF]"
+          onChange={(e) => setOtp(e.target.value)}
+          className="w-full py-2 px-3 border-2 border-[#BEDBFF] rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#2B7FFF]"
           placeholder="Enter your email"
           required
         />
@@ -48,7 +39,7 @@ const ForgotPasswordPage = () => {
         <button
           type="submit"
           disabled={!otp}
-          className={`w-full py-2 px-2 rounded-lg text-white transition 
+          className={`w-full py-2 px-3 rounded-lg text-white font-medium transition 
             ${otp ? "bg-[#2B7FFF] hover:bg-[#1A5DCC]" : "bg-gray-400 cursor-not-allowed"}`}
         >
           Send OTP

@@ -8,7 +8,7 @@ import UserContextProvider from './context/UserContextProvider.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <UserContextProvider >
-      <div className=''>
+      <div className='overflow-hidden max-w-[2100px] mx-auto'> 
         <App />
       </div>
     </UserContextProvider>
