@@ -101,18 +101,18 @@ const ContactForm = () => {
             </div>
 
 
-            <div className="flex md:justify-start justify-center gap-4 pl-4 mt-10 flex-wrap text-white hover:text-black">
+            <div className="flex md:justify-start justify-center gap-4 pl-4 mt-10 flex-wrap text-white">
               {[
-                { icon: <FaFacebookF />, from: "blue-500", to: "purple-500" },
-                { icon: <FaTwitter />, from: "sky-400", to: "blue-600" },
-                { icon: <FaInstagram />, from: "pink-500", to: "yellow-400" },
-                { icon: <FaLinkedinIn />, from: "blue-600", to: "cyan-400" },
+                { icon: <FaFacebookF />, from: "from-blue-500", to: "to-purple-500" },
+                { icon: <FaTwitter />, from: "from-sky-400", to: "to-blue-600" },
+                { icon: <FaInstagram />, from: "from-pink-500", to: "to-yellow-400" },
+                { icon: <FaLinkedinIn />, from: "from-blue-600", to: "to-cyan-400" },
               ].map((social, idx) => (
                 <div
                   key={idx}
-                  className={`p-[2px] rounded-full bg-gradient-to-l from-${social.from} to-${social.to} hover:scale-105 transition-all duration-300`}
+                  className={`p-[2px] rounded-full bg-gradient-to-l ${social.from} ${social.to} hover:scale-105 transition-transform duration-300`}
                 >
-                  <div className="w-[40px] h-[40px] bg-[#0A043C] rounded-full flex items-center justify-center hover:bg-white">
+                  <div className="w-[40px] h-[40px] bg-[#0A043C] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300">
                     {social.icon}
                   </div>
                 </div>

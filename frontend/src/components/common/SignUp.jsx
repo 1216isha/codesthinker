@@ -77,7 +77,7 @@ const SignUp = () => {
             />
           </div>
 
-          <div className="flex items-center justify-between mt-5">
+          {/* <div className="flex items-center justify-between mt-5">
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="w-4 h-4 accent-blue-600 cursor-pointer" />
               <span className="text-sm text-gray-700">Remember me</span>
@@ -85,7 +85,7 @@ const SignUp = () => {
             <a href="#" className="text-sm text-blue-600 hover:underline font-semibold">
               Forgot password?
             </a>
-          </div>
+          </div> */}
 
           <button
             onClick={handleSubmit}
